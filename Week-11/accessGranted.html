@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Security System</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            text-align: center;
+            padding: 50px;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .profile-card {
+            border: 2px solid #ff4444;
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h1 id="status">Access Granted</h1>
+        <p class="hackedStatus">Hacked by... Jun</p>
+    </div>
+
+    <script>
+        let bodyElement = document.querySelector("body");
+        console.log(bodyElement);
+
+        let profile = document.querySelector(".profile-card");
+        console.log(profile);
+    </script>
+    
+</body>
+</html>
