@@ -1,24 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        button {
+            background-color: rgb(253, 253, 252);
+            text-align: center;
+            font-size: 30px;
+            padding: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            align-items: normal;
+        }
 
+        h1 {
+            text-align: center;
+            color: white;
+
+        }
+
+        .drumset {
+            background-color: #000000;
+            border: 2px solid #f58505;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(236, 72, 153, 0.2);
+            /* position: relative; */
+        }
+
+        img{
+            width: 150px;
+            height: 150px;
+        }
+
+        body {
+            background-color: #595959;
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                sans-serif;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: normal;
+        }
     </style>
 </head>
-<body>
-    <h1>Drumset</h1>
 
-    <img id="cowbell" src="images/cowbell.jpeg" alt="grey cowbell with drumstick" />
-    <img id="snare" src="images/snare.jpeg" alt="silver snare drum" />
-    
+<body>
+    <div class="drumset">
+        <h1>Drumset</h1>
+        <a href="index.html"><button>home</button></a>
+
+        <div class="drums"></div>
+        <img id="cowbell" src="images/cowbell.jpeg" alt="grey cowbell with drumstick" />
+        <img id="snare" src="images/snare.jpeg" alt="silver snare drum" />
+        <img id="bassdrum" src="images/bassdrum.jpeg" alt="green bassdrum" />
+        <img id="tom1" src="images/tom1.jpeg" alt="orange tom1" />
+        <img id="tom2" src="images/tom2.jpeg" alt="pink tom2" />
+        <img id="tom3" src="images/tom3.jpeg" alt="black tom3" />
+        <img id="hihat" src="images/hihat.jpeg" alt="yellow hihat" />
+        <img id="cymbal" src="images/cymbal.jpeg" alt="gold cymbal" />
+
+    </div>
+
 
     <script>
         // let cowbell = document.querySelector("img");
         cowbell.addEventListener("click", playCowbell);
-        snare.addEventListener("click", playSnare)
+        snare.addEventListener("click", playSnare);
+        bassdrum.addEventListener("click", playBassdrum);
+        tom1.addEventListener("click", playTom1);
+        tom2.addEventListener("click", playTom2);
+        tom3.addEventListener("click", playTom3);
+        hihat.addEventListener("click", playHihat);
+        cymbal.addEventListener("click", playCymbal);
 
         function playCowbell() {
             let cowbellSound = new Audio("images/cowbell.wav");
@@ -29,6 +90,41 @@
             let snareSound = new Audio("images/snare.wav");
             snareSound.play();
         }
+
+        function playBassdrum() {
+            let bassdrumSound = new Audio("images/bassdrum.wav");
+            bassdrumSound.play();
+        }
+
+        function playTom1() {
+            let tom1Sound = new Audio("images/tom1.wav");
+            tom1Sound.play();
+        }
+
+        function playTom2() {
+            let tom2Sound = new Audio("images/tom2.wav");
+            tom2Sound.play();
+        }
+
+        function playTom3() {
+            let tom3Sound = new Audio("images/tom3.wav");
+            tom3Sound.play();
+        }
+
+        function playHihat() {
+            let hihatSound = new Audio("images/hihat.wav");
+            hihatSound.play();
+        }
+
+        function playCymbal() {
+            let cymbalSound = new Audio("images/cymbal.wav");
+            cymbalSound.play();
+        }
+
+
+
+
     </script>
 </body>
+
 </html>
