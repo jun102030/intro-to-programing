@@ -12,6 +12,7 @@
         }
         .profile-card {
             border: 2px solid #ff4444;
+            /* border : #0cd00c */
             padding: 20px;
             border-radius: 15px;
             display: inline-block
@@ -20,16 +21,17 @@
 </head>
 <body>
     <div class="profile-card">
-        <h1 id="status">Access Granted</h1>
-        <p class="hackedStatus">Hacked by... Jun</p>
+        <h1 id="status">Access Denied</h1>
+        <p class="hackedStatus">Hacked by... Nobody</p>
     </div>
 
     <script>
-        let bodyElement = document.querySelector("body");
-        console.log(bodyElement);
-
-        let profile = document.querySelector(".profile-card");
-        console.log(profile);
+        const status = document.getElementById('status'); 
+        const hackedStatus = document.querySelector('.hackedStatus'); 
+        const profilecard = document.querySelector('.profile-card'); 
+        status.innerText = 'Access Granted'; 
+        hackedStatus.innerText = 'Hacked by... Jun';
+        profilecard.style.borderColor = '#0cd00c';
     </script>
     
 </body>
